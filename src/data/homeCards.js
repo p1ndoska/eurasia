@@ -1,9 +1,9 @@
-import sponsors from '../images/noun_Handshake_8472106.png'
-import evrasia from '../images/evrasia.jpg'
-import evropa from '../images/evropa.jpg'
-import program from '../images/program.jpg'
-import galery from '../images/galery.svg'
-import contacts from '../images/contacts.svg';
+import program from '../images/icons/note_list_icon_124054.svg'
+import participants from '../images/icons/people_group_icon_188185.svg'
+import hotel from '../images/icons/company_workplace_building_office_icon_262568.svg'
+import sponsors from '../images/icons/agreement_contract_business_handshake_icon_259246.svg'
+import gallery from '../images/icons/mbriimagegallery_99572.svg'
+import contacts from '../images/icons/msn_user_avatar_person_people_icon_124220.svg'
 
 const homeCards = [
   {
@@ -15,13 +15,13 @@ const homeCards = [
   {
     title: 'Участники',
     to: '/participants',
-    image: evrasia,
+    image: participants,
     imageAlt: 'Участники',
   },
   {
     title: 'Гостиница Европа',
     href: 'https://www.hoteleurope.by/',
-    image: evropa,
+    image: hotel,
     imageAlt: 'Гостиница Европа',
   },
   {
@@ -33,7 +33,7 @@ const homeCards = [
   {
     title: 'Фотогалерея',
     to: '/gallery',
-    image: galery,
+    image: gallery,
     imageAlt: 'Фотогалерея',
   },
   {
