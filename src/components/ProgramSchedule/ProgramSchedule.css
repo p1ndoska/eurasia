@@ -16,3 +16,18 @@
 .program-schedule__participant {
   width: 30%;
 }
+
+@media (max-width: 640px) {
+  .program-schedule__time {
+    width: 24%;
+    white-space: normal;
+  }
+
+  .program-schedule__event {
+    width: 48%;
+  }
+
+  .program-schedule__participant {
+    width: 28%;
+  }
+}

@@ -62,6 +62,18 @@
 
 @media (max-width: 640px) {
   .data-table {
-    min-width: 560px;
+    min-width: 0;
+    font-size: 0.75rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.4rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  .data-table th {
+    white-space: normal;
   }
 }

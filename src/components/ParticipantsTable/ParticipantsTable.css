@@ -21,3 +21,9 @@
   text-align: center;
   white-space: nowrap;
 }
+
+@media (max-width: 640px) {
+  .participants-table__number {
+    width: 2rem;
+  }
+}
