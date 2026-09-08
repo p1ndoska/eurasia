@@ -1,0 +1,53 @@
+.logo-banner {
+  --ornament-height: clamp(48px, 8vw, 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.25rem, 1.5vw, 1rem);
+  width: 100vw;
+  margin-top: var(--section-gap);
+  margin-bottom: clamp(1rem, 2.5vh, 1.5rem);
+  margin-left: calc(50% - 50vw);
+  min-height: clamp(72px, 12vw, 120px);
+}
+
+.logo-banner__ornament {
+  flex: 1 1 0;
+  min-width: 0;
+  height: var(--ornament-height);
+  background-image: var(--ornament-url);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.logo-banner__ornament--left {
+  background-position: left center;
+}
+
+.logo-banner__ornament--right {
+  transform: scaleX(-1);
+  background-position: left center;
+}
+
+.logo-banner__logo {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: clamp(120px, 22vw, 220px);
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .logo-banner {
+    margin-top: clamp(1.5rem, 4vh, 2.25rem);
+    min-height: clamp(64px, 18vw, 96px);
+    --ornament-height: clamp(36px, 10vw, 56px);
+  }
+
+  .logo-banner__logo {
+    width: clamp(96px, 28vw, 160px);
+  }
+}

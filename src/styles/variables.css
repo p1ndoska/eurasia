@@ -1,0 +1,60 @@
+:root {
+  /* Основная палитра */
+  --color-primary: #243371;
+  --color-primary-light: #334d9e;
+  --color-primary-dark: #1a2554;
+  --color-primary-soft: rgba(36, 51, 113, 0.12);
+  --color-pattern: #7ec8e3;
+  --color-title: #a2d9f9;
+
+  /* Фон и поверхности */
+  --color-bg: #243371;
+  --color-surface: #ffffff;
+  --color-surface-alt: #e8ecf5;
+
+  /* Текст */
+  --color-text: rgba(255, 255, 255, 0.92);
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-text-on-primary: #ffffff;
+  --color-text-on-dark: rgba(255, 255, 255, 0.88);
+
+  /* Акценты и границы */
+  --color-accent: #3b82f6;
+  --color-border: #d1d9e6;
+  --color-border-strong: #243371;
+
+  /* Состояния */
+  --color-hover: rgba(36, 51, 113, 0.08);
+  --color-focus-ring: rgba(36, 51, 113, 0.35);
+
+  /* Тени */
+  --shadow-sm: 0 1px 3px rgba(36, 51, 113, 0.08);
+  --shadow-md: 0 8px 24px rgba(36, 51, 113, 0.12);
+  --shadow-lg: 0 16px 40px rgba(36, 51, 113, 0.16);
+  --filter-flag-hover: brightness(1.1)
+    drop-shadow(0 0 12px rgba(162, 217, 249, 0.9))
+    drop-shadow(0 0 22px rgba(162, 217, 249, 0.55))
+    drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+
+  /* Типографика */
+  --font-sans: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --font-heading: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --font-montserrat: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+
+  /* Отступы и радиусы */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-xl: clamp(2rem, 5vw, 4rem);
+
+  /* Контейнер */
+  --container-max: 1360px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+  --section-gap: clamp(2rem, 5vh, 3.5rem);
+  --header-height: clamp(140px, 22vh, 220px);
+}

@@ -1,0 +1,8 @@
+.participants-page {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.section-page:has(.participants-page) .section-page__content {
+  max-width: 1200px;
+}

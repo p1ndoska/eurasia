@@ -1,0 +1,69 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  min-width: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__image-wrap {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-surface-alt);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover .card__image-wrap,
+.card:focus-visible .card__image-wrap {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 16px rgba(162, 217, 249, 0.75),
+    0 8px 24px rgba(36, 51, 113, 0.2);
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .card__image,
+.card:focus-visible .card__image {
+  transform: scale(1.03);
+}
+
+.card__title {
+  margin-top: clamp(0.75rem, 2vh, 1rem);
+  font-family: var(--font-montserrat);
+  font-size: clamp(1.125rem, 1.4vw + 0.4rem, 1.625rem);
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--color-title);
+  transition: color 0.25s ease;
+}
+
+.card:hover .card__title,
+.card:focus-visible .card__title {
+  color: #ffffff;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: min(100%, 280px);
+  }
+}

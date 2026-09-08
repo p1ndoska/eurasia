@@ -1,0 +1,37 @@
+.home-page__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: var(--section-gap);
+  justify-items: center;
+}
+
+.home-page__minsk {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: var(--section-gap);
+}
+
+@media (min-width: 480px) {
+  .home-page__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .home-page__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page__cards {
+    margin-top: clamp(1.5rem, 4vh, 2.25rem);
+  }
+
+  .home-page__minsk {
+    margin-top: clamp(1.5rem, 4vh, 2.25rem);
+  }
+}

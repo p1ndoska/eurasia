@@ -1,0 +1,47 @@
+.round-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.round-icon:hover,
+.round-icon:focus-visible {
+  transform: scale(1.1);
+  filter: var(--filter-flag-hover);
+}
+
+.round-icon:focus-visible {
+  outline: 2px solid var(--color-title);
+  outline-offset: 3px;
+}
+
+.round-icon__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(var(--flag-crop-scale, 1.22));
+}
+
+@media (hover: none) {
+  .round-icon:active {
+    transform: scale(1.06);
+    filter: var(--filter-flag-hover);
+  }
+}

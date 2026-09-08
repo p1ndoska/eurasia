@@ -1,0 +1,18 @@
+.program-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vh, 2rem);
+}
+
+.program-schedule__time {
+  width: 14%;
+  white-space: nowrap;
+}
+
+.program-schedule__event {
+  width: 56%;
+}
+
+.program-schedule__participant {
+  width: 30%;
+}
