@@ -16,14 +16,3 @@
   text-align: center;
 }
 
-.participants-table__number {
-  width: 3rem;
-  text-align: center;
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .participants-table__number {
-    width: 2rem;
-  }
-}

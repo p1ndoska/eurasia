@@ -14,7 +14,6 @@ function ParticipantsTable({ title, participants }) {
         <table className="data-table">
           <thead>
             <tr>
-              <th scope="col">№</th>
               <th scope="col">Организация</th>
               <th scope="col">ФИО</th>
               <th scope="col">Должность</th>
@@ -24,9 +23,6 @@ function ParticipantsTable({ title, participants }) {
             {participants.map(
               ({ organization, name, position }, index) => (
                 <tr key={`${organization}-${name}-${index}`}>
-                  <td className="data-table__accent participants-table__number">
-                    {index + 1}
-                  </td>
                   <td>{organization}</td>
                   <td>{name}</td>
                   <td>{position}</td>
