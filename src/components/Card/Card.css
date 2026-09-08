@@ -32,6 +32,7 @@
   height: 100%;
   padding: clamp(1.5rem, 3vw, 2.5rem);
   object-fit: contain;
+  filter: brightness(0) invert(1);
   transition: transform 0.25s ease;
 }
 
