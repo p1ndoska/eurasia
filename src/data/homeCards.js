@@ -1,4 +1,4 @@
-import sponsors from '../images/sponsors.jpg'
+import sponsors from '../images/noun_Handshake_8472106.png'
 import evrasia from '../images/evrasia.jpg'
 import evropa from '../images/evropa.jpg'
 import program from '../images/program.jpg'
