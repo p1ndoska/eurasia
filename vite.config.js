@@ -47,9 +47,4 @@ function embedFlagSvgImages() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), embedFlagSvgImages()],
-  server: {
-    proxy: {
-      '/api': 'http://localhost:3001',
-    },
-  },
 })

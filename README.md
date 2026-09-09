@@ -1,53 +1,20 @@
-# Eurasia Full-Stack
+<<<<<<< HEAD
+# React + Vite
 
-Full-stack starter project with a Vite + React frontend, an Express API, and PostgreSQL for local development.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Project structure
+Currently, two official plugins are available:
 
-- `frontend/` — React application powered by Vite.
-- `backend/` — Node.js API powered by Express.
-- `docker-compose.yml` — local PostgreSQL service.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Requirements
+## React Compiler
 
-- Node.js 22+
-- npm 10+
-- Docker with Compose
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Run locally
+## Expanding the Oxlint configuration
 
-Start PostgreSQL:
-
-```bash
-docker compose up -d db
-```
-
-Install backend dependencies and start the API:
-
-```bash
-cd backend
-cp .env.example .env
-npm install
-npm run dev
-```
-
-In another terminal, install frontend dependencies and start Vite:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The frontend proxies `/api` requests to `http://localhost:3001`. The API exposes:
-
-- `GET /api/health`
-- `GET /api/health/db`
-
-## Checks
-
-```bash
-cd frontend
-npm run lint
-npm run build
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+=======
+# eurasia
+>>>>>>> 50305e80610f5d99a257efbf57195ee46327de1e
