@@ -26,7 +26,10 @@ function ProgramDayTable({ date, items }) {
               <td className="data-table__accent program-schedule__time">
                 {item.time}
               </td>
-              <td className="program-schedule__event">
+              <td
+                className="program-schedule__event"
+                colSpan={item.eventColSpan || 1}
+              >
                 {renderLines(item.event)}
               </td>
               {!item.skipParticipant && (
