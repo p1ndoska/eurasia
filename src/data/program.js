@@ -63,6 +63,7 @@ export const programDays = [
         time: '09:00–09:30',
         event: 'Регистрация участников',
         eventColSpan: 2,
+        skipParticipant: true,
       },
       {
         time: '09:30–09:50',
@@ -106,11 +107,13 @@ export const programDays = [
         time: '11:00–11:20',
         event: 'Кофе-брейк',
         eventColSpan: 2,
+        skipParticipant: true,
       },
       {
         time: '11:20–11:25',
         event: 'Совместное фото',
         eventColSpan: 2,
+        skipParticipant: true,
       },
       {
         time: '11:25–11:40',
@@ -160,6 +163,7 @@ export const programDays = [
         time: '13:00–14:00',
         event: 'Обед',
         eventColSpan: 2,
+        skipParticipant: true,
       },
       {
         time: '14:00–14:10',
@@ -197,6 +201,7 @@ export const programDays = [
         time: '15:00–15:30',
         event: 'Кофе-брейк',
         eventColSpan: 2,
+        skipParticipant: true,
       },
       {
         time: '15:30–15:40',
