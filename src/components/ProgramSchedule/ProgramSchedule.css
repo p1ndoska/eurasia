@@ -17,6 +17,10 @@
   width: 30%;
 }
 
+.program-schedule .data-table td {
+  vertical-align: middle;
+}
+
 @media (max-width: 640px) {
   .program-schedule__time {
     width: 24%;
