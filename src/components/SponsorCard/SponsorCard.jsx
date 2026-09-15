@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import './SponsorCard.css'
 
-function SponsorCard({ image, imageAlt, caption, href }) {
+function SponsorCard({ image, imageAlt, caption, href, to, className = '' }) {
   const content = (
     <>
       <div className="sponsor-card__image-wrap">
@@ -15,11 +16,23 @@ function SponsorCard({ image, imageAlt, caption, href }) {
     </>
   )
 
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={`sponsor-card sponsor-card--link ${className}`}
+        aria-label={caption}
+      >
+        {content}
+      </Link>
+    )
+  }
+
   if (href) {
     return (
       <a
         href={href}
-        className="sponsor-card sponsor-card--link"
+        className={`sponsor-card sponsor-card--link ${className}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={caption}
@@ -29,7 +42,7 @@ function SponsorCard({ image, imageAlt, caption, href }) {
     )
   }
 
-  return <article className="sponsor-card">{content}</article>
+  return <article className={`sponsor-card ${className}`}>{content}</article>
 }
 
 export default SponsorCard

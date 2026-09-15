@@ -3,12 +3,12 @@ import Container from '../Container/Container'
 import LogoBanner from '../LogoBanner/LogoBanner'
 import './SectionPage.css'
 
-function SectionPage({ title, children }) {
+function SectionPage({ title, children, backTo = '/', backLabel = 'На главную' }) {
   return (
     <main className="app__main section-page">
       <Container>
-        <Link to="/" className="section-page__back">
-          ← На главную
+        <Link to={backTo} className="section-page__back">
+          ← {backLabel}
         </Link>
 
         <header className="section-page__header">

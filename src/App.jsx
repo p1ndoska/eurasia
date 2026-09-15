@@ -9,6 +9,7 @@ import ContactsPage from './pages/ContactsPage'
 import HotelPage from './pages/HotelPage'
 import ProgramPage from './pages/ProgramPage'
 import GalleryPage from './pages/GalleryPage'
+import GalleryDayPage from './pages/GalleryDayPage'
 import './App.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/hotel" element={<HotelPage />} />
             <Route path="/program" element={<ProgramPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/gallery/:day" element={<GalleryDayPage />} />
             <Route path="/sponsors" element={<SponsorsPage />} />
           </Routes>
 
