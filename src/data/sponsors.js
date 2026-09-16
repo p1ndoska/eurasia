@@ -1,7 +1,7 @@
-import rts from '../images/sponsors/25566 (1).jpg'
-import kompas from '../images/sponsors/6594718.jpeg'
-import agat from '../images/sponsors/Agat_logo.png'
-import risk from '../images/sponsors/R_I_S_K__Company.png'
+import rts from '../images/sponsors/25566 (1).webp'
+import kompas from '../images/sponsors/6594718.webp'
+import agat from '../images/sponsors/Agat_logo.webp'
+import risk from '../images/sponsors/R_I_S_K__Company.webp'
 
 const sponsors = [
   {

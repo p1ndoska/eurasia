@@ -5,7 +5,7 @@ export const dayDates = {
 }
 
 export const dayPhotos = Object.entries(
-  import.meta.glob('../images/gallery/**/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+  import.meta.glob('../images/gallery/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
     eager: true,
   }),
 )
