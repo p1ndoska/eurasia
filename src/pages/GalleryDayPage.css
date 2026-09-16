@@ -13,6 +13,11 @@
 
 .gallery-day__link {
   display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);

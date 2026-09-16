@@ -1,3 +1,12 @@
 .gallery-card .sponsor-card__image-wrap {
   background-image: linear-gradient(135deg, #374c86, #a2d9f7);
 }
+
+.gallery-card--photo .sponsor-card__image-wrap {
+  padding: 0;
+}
+
+.gallery-card--photo .sponsor-card__image {
+  padding: 0;
+  object-fit: cover;
+}

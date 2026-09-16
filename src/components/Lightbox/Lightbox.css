@@ -1,0 +1,93 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 37, 84, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox__image {
+  max-width: min(92vw, 1400px);
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: clamp(0.75rem, 2vh, 1.5rem);
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-title);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  background: rgba(162, 217, 249, 0.25);
+  color: #fff;
+}
+
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-title);
+  font-size: 2rem;
+  line-height: 1;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lightbox__arrow:hover,
+.lightbox__arrow:focus-visible {
+  background: rgba(162, 217, 249, 0.25);
+  color: #fff;
+}
+
+.lightbox__arrow--prev {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.lightbox__arrow--next {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.lightbox__counter {
+  position: absolute;
+  bottom: clamp(0.75rem, 2.5vh, 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-size: 0.9375rem;
+  color: var(--color-title);
+}
+
+.lightbox__close:focus-visible,
+.lightbox__arrow:focus-visible {
+  outline: 2px solid var(--color-title);
+  outline-offset: 2px;
+}

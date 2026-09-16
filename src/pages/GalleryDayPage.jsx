@@ -1,32 +1,16 @@
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import SectionPage from '../components/SectionPage/SectionPage'
 import PagePlaceholder from '../components/PagePlaceholder/PagePlaceholder'
+import Lightbox from '../components/Lightbox/Lightbox'
+import { dayDates, dayPhotos } from '../data/gallery'
 import './GalleryDayPage.css'
-
-const dayDates = {
-  15: '15 сентября',
-  16: '16 сентября',
-  17: '17 сентября',
-}
-
-const dayPhotos = Object.entries(
-  import.meta.glob('../images/gallery/**/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
-    eager: true,
-  }),
-)
-  .sort(([a], [b]) => a.localeCompare(b))
-  .reduce((acc, [path, mod]) => {
-    const day = path.split('/images/gallery/')[1]?.split('/')[0]
-    if (day) {
-      ;(acc[day] ||= []).push(mod.default)
-    }
-    return acc
-  }, {})
 
 function GalleryDayPage() {
   const { day } = useParams()
   const date = dayDates[day] || day
   const photos = dayPhotos[day] || []
+  const [lightboxIndex, setLightboxIndex] = useState(null)
 
   return (
     <SectionPage title={date} backTo="/gallery" backLabel="В галерею">
@@ -34,11 +18,11 @@ function GalleryDayPage() {
         <ul className="gallery-day__grid">
           {photos.map((src, index) => (
             <li key={src} className="gallery-day__item">
-              <a
-                href={src}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
                 className="gallery-day__link"
+                onClick={() => setLightboxIndex(index)}
+                aria-label={`Открыть фото ${index + 1} — ${date}`}
               >
                 <img
                   src={src}
@@ -46,12 +30,21 @@ function GalleryDayPage() {
                   className="gallery-day__image"
                   loading="lazy"
                 />
-              </a>
+              </button>
             </li>
           ))}
         </ul>
       ) : (
         <PagePlaceholder message="Фотографии появятся здесь позже." />
+      )}
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          photos={photos}
+          initialIndex={lightboxIndex}
+          alt={`Фото — ${date}`}
+          onClose={() => setLightboxIndex(null)}
+        />
       )}
     </SectionPage>
   )
