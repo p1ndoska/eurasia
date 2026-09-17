@@ -6,7 +6,7 @@ import Lightbox from '../components/Lightbox/Lightbox'
 import { dayDates, dayPhotos } from '../data/gallery'
 import './GalleryDayPage.css'
 
-const photosPerPage = 21
+const photosPerPage = 15
 
 function GalleryDayPage() {
   const { day } = useParams()
