@@ -9,7 +9,11 @@ export const dayPhotos = Object.entries(
     eager: true,
   }),
 )
-  .sort(([a], [b]) => a.localeCompare(b))
+  .sort(
+    ([a], [b]) =>
+      Number(a.match(/(\d+)\.[^.]+$/)?.[1] ?? 0) -
+      Number(b.match(/(\d+)\.[^.]+$/)?.[1] ?? 0),
+  )
   .reduce((acc, [path, mod]) => {
     const day = path.split('/images/gallery/')[1]?.split('/')[0]
     if (day) {
