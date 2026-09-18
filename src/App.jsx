@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { CookieConsentProvider } from './context/CookieConsentContext'
 import Header from './components/Header/Header'
 import CookieConsent from './components/CookieConsent/CookieConsent'
@@ -15,7 +15,7 @@ import './App.css'
 function App() {
   return (
     <CookieConsentProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="app">
           <Header />
 
@@ -32,7 +32,7 @@ function App() {
 
           <CookieConsent />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </CookieConsentProvider>
   )
 }
